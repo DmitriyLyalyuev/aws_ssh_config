@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import boto3
+
+client = boto3.client('ec2')
+instances = client.describe_instances(
+    Filters=[
+        {
+            'Name': 'tag:Name',
+            'Values': [
+                '*'
+            ]
+        },
+        {
+            'Name': 'instance-state-name',
+            'Values': ['running']
+        }
+    ],
+    MaxResults=100,
+)
+del client
+for host in instances['Reservations']:
+    for tag in host['Instances'][0]['Tags']:
+        if tag['Key'] == 'Name':
+            print 'Host ' + tag['Value']
+    print '    HostName ' + host['Instances'][0]['PublicIpAddress']
+    print '    User ubuntu'
+    print ''
