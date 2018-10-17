@@ -1,4 +1,4 @@
-# Autocomplete SSH config for AWS
+# Autocomplete SSH hosts for AWS
 
 ## Setup autocompletion
 
