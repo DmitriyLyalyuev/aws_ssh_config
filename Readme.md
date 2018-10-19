@@ -16,11 +16,11 @@ Or you can use [environment variables](https://boto3.amazonaws.com/v1/documentat
 
 Create symlink to `.ssh_autocompletion` file in your home folder:
 
-    $ ln -sf  $(pwd)/.ssh_autocompletion ~/
+    $ ln -sf  $(pwd)/.bash_autocompletion ~/
 
-Import `.ssh_autocompletion` in your `~/.bashrc`:
+Import `.bash_autocompletion` in your `~/.bashrc`:
 
-    $ echo 'source ~/.ssh_autocompletion' >> ~/.bashrc
+    $ echo 'source ~/.bash_autocompletion' >> ~/.bashrc
     $ . ~/.bash.rc
 
 ## Installing
