@@ -12,7 +12,7 @@ On MacOS X run:
 
 Enter your credentials to get access to the AWS API.
 
-Or you can use (environment variables)[https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#environment-variable-configuration].
+Or you can use [environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#environment-variable-configuration).
 
 Create symlink to `.ssh_autocompletion` file in your home folder:
 
