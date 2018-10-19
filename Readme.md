@@ -29,11 +29,11 @@ Create for ssh `config.d` folder:
 
 and create symlink to script in /usr/local/bin:
 
-    $ ln -sf $(pwd)/update_aws_ssh_config /usr/local/bin/update_aws_ssh_config
+    $ ln -sf $(pwd)/aws_ssh_config /usr/local/bin/aws_ssh_config
 
 To generate or update ssh config for AWS hosts run:
 
-    update_aws_ssh_config > ~/.ssh/config.d/aws
+    aws_ssh_config > ~/.ssh/config.d/aws
 
 ## Usage
 
