@@ -10,7 +10,9 @@ On MacOS X run:
     $ pip install boto3 awscli
     $ aws configure
 
-Enter your credentials to get access to AWS API.
+Enter your credentials to get access to the AWS API.
+
+Or you can use (environment variables)[https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#environment-variable-configuration].
 
 Create symlink to `.ssh_autocompletion` file in your home folder:
 
@@ -21,15 +23,23 @@ Import `.ssh_autocompletion` in your `~/.bashrc`:
     $ echo 'source ~/.ssh_autocompletion' >> ~/.bashrc
     $ . ~/.bash.rc
 
+## Installing
+
+The easiest way to install aws_ssh_config is to use pip:
+
+    $ pip install aws_ssh_config
+
+or from sources:
+
+    $ git clone https://github.com/DmitriyLyalyuev/aws_ssh_config.git
+    $ cd aws_ssh_config
+    $ python3 setup.py install
+
 ## Generating/updating ssh config
 
 Create for ssh `config.d` folder:
 
     $ mkdir -p ~/.ssh/config.d
-
-and create symlink to script in /usr/local/bin:
-
-    $ ln -sf $(pwd)/aws_ssh_config /usr/local/bin/aws_ssh_config
 
 To generate or update ssh config for AWS hosts run:
 
