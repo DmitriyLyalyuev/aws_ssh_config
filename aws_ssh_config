@@ -25,4 +25,4 @@ for host in instances['Reservations']:
             print('Host ' + tag['Value'])
     print('    HostName ' + host['Instances'][0]['PublicIpAddress'])
     print('    User ubuntu')
-    print()
+    print('')
