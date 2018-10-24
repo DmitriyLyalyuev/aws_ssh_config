@@ -29,7 +29,13 @@ def readme():
         with open('Readme.md') as f:
             return f.read()
     except IOError:
-        return ''
+        return """To get autocompletion working you need to do:
+$ wget -O ~/.bash_autocompletion https://raw.githubusercontent.com/DmitriyLyalyuev/aws_ssh_config/master/.bash_autocompletion
+$ echo 'source ~/.bash_autocompletion' >> ~/.bashrc
+$ . ~/.bashrc
+$ mkdir -p ~/.ssh/config.d
+$ aws_ssh_config > ~/.ssh/config.d/aws_hosts
+"""
 
 __version__ = find_version("aws_ssh_config/__init__.py")
 

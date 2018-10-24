@@ -27,9 +27,10 @@ instances = client.describe_instances(
 )
 del client
 for host in instances['Reservations']:
-    for tag in host['Instances'][0]['Tags']:
-        if tag['Key'] == 'Name':
-            print('Host ' + tag['Value'])
-    print('    HostName ' + host['Instances'][0]['PublicIpAddress'])
-    print('    User ubuntu')
-    print('')
+    if 'PublicIpAddress' in host['Instances'][0]:
+        for tag in host['Instances'][0]['Tags']:
+            if tag['Key'] == 'Name':
+                print('Host ' + tag['Value'])
+        print('    HostName ' + host['Instances'][0]['PublicIpAddress'])
+        print('    User ubuntu')
+        print('')
